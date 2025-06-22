@@ -1,0 +1,12 @@
+yfinance
+pandas
+numpy
+matplotlib
+seaborn
+ta
+tabulate
+requests
+vaderSentiment
+scikit-learn
+setuptools
+flask
