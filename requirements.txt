@@ -10,3 +10,4 @@ vaderSentiment
 scikit-learn
 setuptools
 flask
+gunicorn
