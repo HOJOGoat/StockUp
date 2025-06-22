@@ -140,6 +140,15 @@
             <input type="text" name="ticker" placeholder="Enter stock symbol (e.g. AAPL)" required>
             <button type="submit">Analyze</button>
         </form>
+        {% if pdf_ready %}
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="{{ url_for('download_pdf', ticker=ticker) }}" target="_blank">
+                    <button style="padding: 0.75rem 1.25rem; font-size: 1rem; font-weight: 600; background: #10b981; color: white; border: none; border-radius: 8px; cursor: pointer;">
+                        📄 Download PDF Report
+                    </button>
+                </a>
+            </div>
+        {% endif %}
 
         {% if report %}
             <h2>Report</h2>
@@ -150,6 +159,7 @@
             <h3>Technical Chart</h3>
             <img src="{{ chart_path }}" alt="Technical Chart">
         {% endif %}
+        
     </div>
 </body>
 </html>
